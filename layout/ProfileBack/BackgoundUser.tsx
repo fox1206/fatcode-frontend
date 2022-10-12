@@ -1,5 +1,7 @@
-import React from "react";
+import React, {ReactChildren, ReactNode} from "react";
 import {Container, Grid} from "@mui/material";
+import LeftMenu from "../profile/LeftMenu";
+
 
 const BackgoundUser = ({children}) => {
     return(
@@ -9,7 +11,14 @@ const BackgoundUser = ({children}) => {
                 borderBottomRightRadius: 20,
                 paddingBottom: 5
             }}>
-                    {children}
+                <Grid container>
+                    <Grid xs={3}>
+                        <LeftMenu/>
+                    </Grid>
+                    <Grid ml={5} mt={2} xs={8}>
+                        {children}
+                    </Grid>
+                </Grid>
             </Container>
     )
 }
