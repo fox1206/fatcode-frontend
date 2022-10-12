@@ -17,13 +17,12 @@ const Mentors = () => {
     return(
         <BackgoundUser>
             <ProfileTitle text={"Мои ментора"}/>
-            <Grid container>
-                <Container>
-                    <Grid xs={10}>
-                        <MentorList mentor={mentor}/>
-                    </Grid>
+                <Container sx={{
+                    height: 150,
+                    background: "#F3F3F3"
+                }}>
+                    <MentorList mentor={mentor}/>
                 </Container>
-            </Grid>
         </BackgoundUser>
     )
 }

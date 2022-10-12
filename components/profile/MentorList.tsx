@@ -7,12 +7,17 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 const MentorList = ({mentor}) => {
   return(
         <>
-            <Grid container>
-                <ArrowBackIosIcon/>
+            <Grid container mt={3}>
+                <Grid mt={2} xs={1}>
+                    <ArrowBackIosIcon/>
+                </Grid>
                 {mentor.map(item=>(<>
-                        <Grid ml={5}>
+                        <Grid>
                             <Grid ml={1}>
-                                <Avatar/>
+                                <Avatar sx={{
+                                    width: 90,
+                                    height: 90
+                                }}/>
                             </Grid>
                             <Typography>
                                 {item.text}
@@ -20,7 +25,7 @@ const MentorList = ({mentor}) => {
                         </Grid>
                     </>
                 ))}
-                <Grid>
+                <Grid mt={2} xs={1}>
                     <ArrowForwardIosIcon/>
                 </Grid>
             </Grid>

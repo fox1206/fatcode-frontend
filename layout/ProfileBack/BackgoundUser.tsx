@@ -9,7 +9,7 @@ const BackgoundUser = ({children}) => {
                 background: "white",
                 borderBottomLeftRadius: 20,
                 borderBottomRightRadius: 20,
-                paddingBottom: 5
+                paddingBottom: 10
             }}>
                 <Grid container>
                     <Grid xs={3}>
