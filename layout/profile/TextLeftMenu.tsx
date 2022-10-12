@@ -1,9 +1,12 @@
 import React from "react";
 import {Grid, Typography} from "@mui/material";
+import {useRouter} from "next/router";
+import Link from "next/link";
 
 
 //Навесить линки на переходы по страницам
 const TextLeftMenu = ({list}) => {
+    const router = useRouter()
     return (
         <>
             {
@@ -12,9 +15,13 @@ const TextLeftMenu = ({list}) => {
                         <Typography key={item.key} sx={{
                             color: "white",
                             fontSize: 25,
-                            fontWeight: "bold"
+                            fontWeight: "bold",
+                            "&:hover": {
+                                background: "white",
+                                color: "#69CB2D"
+                            }
                         }}>
-                            {item.text}
+                            <Link href={item.href}>{item.text}</Link>
                         </Typography>
                     </Grid>
                 ))
