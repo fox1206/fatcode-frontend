@@ -1,67 +1,117 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavBarText } from '../../data/TextsLists';
 import HeaderLinks from '../../components/header/componentsHeader/HeaderLinks';
-import {Container, Grid, TextField, Typography, Button} from '@mui/material';
-import Input from '@mui/material/Input';
+import {InputBase, Container, IconButton, Typography, Button} from '@mui/material';
 import Image from 'next/image';
+import { InputAdornment } from '@mui/material';
+import SearchIcon from '@mui/icons-material/Search';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+import AppBar from '@mui/material/AppBar';
+import { Toolbar } from '@mui/material';
+import Box from '@mui/material/Box';
+import PersonOutlineRoundedIcon from '@mui/icons-material/PersonOutlineRounded';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+
+
 
 const NavBar: React.FC = ({children}) => {
+const [anchorEl, setAnchorEl] = useState(null);
+
+const click = (event) => {
+  console.log(event.currentTarget);
+  setAnchorEl(event.currentTarget);
+}
+
+const closeMenu = () => {
+  console.log('close');
+  setAnchorEl(null);
+}
+
+const openMenu = Boolean(anchorEl);
+
   return (
     <>
       <Container maxWidth={"xl"} sx={{
-            height: 'auto',
-            background: "#E5E5E5",
             color: '#1C1D1E',
-            fontSize: 20,
-            fontWeight: 600,
-            paddingY: 2,
         }}>
-            <Grid container alignItems={'center'}>
-                <Grid xs={2}>
-                    {/*<Image src={}/>*/}
-                    {/* <Image 
-                      src={'../../../public/assets/image/svg/logoheader.svg'}
-                      layout="fill"
-                    /> */}
-                    {/* <Typography>
-                        Fat( )Code
-                    </Typography> */}
-                </Grid>
-                <Grid xs={6} mr={7}
-                sx={{
-                  display: "flex",
-                  justifyContent: 'flex-end'
-                }}>
-                    <HeaderLinks links={NavBarText}/>
-                </Grid>
-                <Grid xs={2} mt={-1}>
-                    {/* <TextField id="filled-basic"
-                               label="Что найти"
-                               variant="filled"
-                               sx={{ height: ".5em" }}/> */}
-                  <Input placeholder='искать тут'
-                  sx={{
-                    paddingTop: 2,
-                    paddingLeft: 2,
-                  }}
-                  />                
-                </Grid>
-                <Grid xs={1}>
-                    <Button variant='text'
-                    sx={{
-                      width: '100%',
-                      textTransform: 'capitalize',
-                      fontWeight: 600,
-                      fontSize: 20, 
-                      color: '#1C1D1E',
-                    }}>
-                      Войти
-                    </Button>
-                </Grid>
-                <Grid>
+          <AppBar elevation={0} sx={{backgroundColor: '#E5E5E5'}}>
+            <Toolbar>
+              <Box component='div'
+              sx={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                width: '100%',
+                color: '#1C1D1E',
+              }}>
+                {/* логотип */}
+                <Box>
+                  <Typography>
+                    Fat( )Code
+                  </Typography>
+                </Box>  
 
-                </Grid>
-            </Grid>
+                {/* ссылки */}
+                <Box>
+                  <HeaderLinks links={NavBarText}/>
+                </Box>
+
+                {/* поле для поиска */}
+                <Box>
+                  <InputBase placeholder='искать тут'
+                    endAdornment={
+                    <InputAdornment position='end'>
+                      <SearchIcon />
+                    </InputAdornment>
+                  }
+                  sx={{
+                    paddingX: 2,
+                    borderBottom: '1px solid #1C1D1E',
+                    // display: {sx: 'none', sm: 'flex'},
+                  }} />
+                </Box>
+
+                {/* кнопка для входа */}
+                <Box>
+                  <IconButton>
+                    <PersonOutlineRoundedIcon sx={{color: '#69CB2D'}}/>
+                  </IconButton>
+                  <Button variant='text' disableElevation
+                  sx={{
+                    textTransform: 'capitalize',
+                    // fontWeight: 500,
+                    // fontSize: 20, 
+                    color: '#1C1D1E',
+                  }}>
+                    Войти
+                  </Button>
+
+                  {/* кнопка ... */}
+                  <IconButton 
+                    aria-controls='menu'
+                    aria-haspopup='true'
+                    aria-expanded={openMenu ? 'true' : undefined}
+                    onClick={click}
+                  >
+                    <MoreVertIcon />
+                    {/* выпадающие элементы при нажатии на ... */}
+                    <Menu 
+                      id='menu' 
+                      anchorEl={anchorEl} 
+                      // open={openMenu} 
+                      // onClose={closeMenu}
+                    >
+                      <MenuItem onClick={closeMenu}>Главная</MenuItem>
+                      <MenuItem onClick={closeMenu}>Курсы</MenuItem>
+                      <MenuItem onClick={closeMenu}>Вопрос-ответ</MenuItem>
+                      <MenuItem onClick={closeMenu}>База знаний</MenuItem>
+                    </Menu>
+                  </IconButton>
+                </Box>
+              </Box>              
+            </Toolbar>
+          </AppBar>
         </Container>
     </>    
   );
@@ -69,6 +119,3 @@ const NavBar: React.FC = ({children}) => {
 
 const MemoNavBar = React.memo(NavBar);
 export default MemoNavBar;
-
-// MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary css-1nr5b3u-MuiInputBase-root-MuiInput-root
-// MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary css-1cmjvb1-MuiInputBase-root-MuiInput-root
