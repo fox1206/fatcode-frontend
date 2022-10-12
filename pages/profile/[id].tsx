@@ -1,20 +1,50 @@
 import React from "react";
-import {Grid, Typography} from "@mui/material";
+import {Avatar, Grid, Typography} from "@mui/material";
 import BackgoundUser from "../../layout/ProfileBack/BackgoundUser";
-import LeftMenu from "../../components/profile/LeftMenu";
+import UserInformation from "../../components/profile/UserInformation";
+import Pencil from "../../components/profile/Pencil";
+import UserAvatar from "../../components/profile/UserAvatar";
+import ProfileTitle from "../../components/profile/ProfileTitle";
 
-const UserProfile = () => {
+
+const User = () => {
+    const user = [
+        {key: 1, text: "Логин", use: "Ватрушка"},
+        {key: 2, text: "E-mail", use: "vatrushka_pushka@gmail.com"},
+        {key: 3, text: "Имя ", use: "Екатерина"},
+        {key: 4, text: "Фамилия ", use: "Иванова"},
+        {key: 5, text: "Отчество", use: "Гульнаровна"},
+    ]
+
+    const userLink = [
+        {key: 1, text: "Linkedin", use: "https://www.linkedin.com"},
+        {key: 2, text: "Youtube", use: "https://www.youtube.com"},
+        {key: 3, text: "VK", use: "https://vk.com"},
+    ]
+
     return(
         <>
             <BackgoundUser>
                 <Grid container>
-                    <Grid xs={3}>
-                        <LeftMenu/>
+                    <Grid xs={9} mb={1}>
+                        <ProfileTitle text={"Профиль"}/>
+                        <Grid ml={35}>
+                            <Pencil text={"Редактировать"}/>
+                        </Grid>
                     </Grid>
-                    <Grid ml={5} xs={8}>
-                        <Typography>
-                            Hello
-                        </Typography>
+                    <Grid xs={7}>
+                        <UserInformation
+                            user={user} bcolor={"#F3F3F3"}/>
+                    </Grid>
+                    <Grid xs={3} mt={-5} ml={8}>
+                        <UserAvatar/>
+                    </Grid>
+                    <Grid mt={1}>
+                        <UserInformation user={userLink}
+                                         bcolor={"white"}
+                                         border={"3px solid #F3F3F3"}
+                                         width={650}
+                                         decoration={"underline"}/>
                     </Grid>
                 </Grid>
             </BackgoundUser>
@@ -22,4 +52,4 @@ const UserProfile = () => {
     )
 }
 
-export default UserProfile
+export default User
