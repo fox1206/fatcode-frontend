@@ -6,6 +6,7 @@ import MainLayout from "../../layouts/Main/MainLayout";
 
 const Courses = () => {
 
+  // проверить стиль
   return(
     <MainLayout>
         <CardsCourse />
