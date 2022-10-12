@@ -14,7 +14,6 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
 
-
 const NavBar: React.FC = ({children}) => {
 const [anchorEl, setAnchorEl] = useState(null);
 
@@ -33,7 +32,7 @@ const openMenu = Boolean(anchorEl);
   return (
     <>
       <Container maxWidth={"xl"} sx={{
-            color: '#1C1D1E',
+            color: '#1C1D1E', marginBottom: 8
         }}>
           <AppBar elevation={0} sx={{backgroundColor: '#E5E5E5'}}>
             <Toolbar>
@@ -113,6 +112,7 @@ const openMenu = Boolean(anchorEl);
             </Toolbar>
           </AppBar>
         </Container>
+        {children}
     </>    
   );
 };

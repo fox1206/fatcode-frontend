@@ -10,6 +10,7 @@ const HeaderLinks: React.FC<LinkProps> = ({links})=>{
           display: 'flex',
           alignItems: 'center',
           columnGap: 6,
+          whiteSpace: 'nowrap'
         }}>
           {links.map((item) => (
             <Link key={item.id} href={item.href}>
