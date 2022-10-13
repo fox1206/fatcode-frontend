@@ -3,7 +3,6 @@ import { styled } from '@mui/system';
 import TabsUnstyled from '@mui/base/TabsUnstyled';
 import TabsListUnstyled from '@mui/base/TabsListUnstyled';
 import TabPanelUnstyled from '@mui/base/TabPanelUnstyled';
-import { buttonUnstyledClasses } from '@mui/base/ButtonUnstyled';
 import TabUnstyled, { tabUnstyledClasses } from '@mui/base/TabUnstyled';
 
 
@@ -87,98 +86,3 @@ export default function QuestionAnswer() {
     </TabsUnstyled>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React from "react";
-// import PropTypes from 'prop-types';
-// import {Avatar, Grid, Typography, Box} from "@mui/material";
-// import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-// import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-// import ButtonBase from '@mui/material/ButtonBase';
-// import ButtonGroup from '@mui/material/ButtonGroup';
-
-
-// const QuestionAnswer = () => {
-//   return(
-//    <>
-//     <Grid container>
-//       <ButtonGroup sx={{cursor: 'pointer'}}>
-//         <ButtonBase sx={{
-//           width: 288,
-//           fontFamily: 'Verdana',  
-//           fontSize: 20,  
-//           fontWeight: 700,
-//           border: '1px solid #69CB2D',
-//           paddingY: 1,
-//           borderTopLeftRadius: 30,
-//           borderBottomLeftRadius: 30,
-//           color: '#1C1D1E',
-//         }}>
-//           Мои вопросы
-//         </ButtonBase>  
-
-//         <ButtonBase sx={{
-//           width: 288,
-//           fontFamily: 'Verdana',    
-//           fontSize: 20,  
-//           fontWeight: 700,
-//           border: '1px solid #69CB2D',
-//           paddingY: 1,
-//           borderTopRightRadius: 30,
-//           borderBottomRightRadius: 30,
-//           color: '#1C1D1E',
-//         }}>
-//           Мои ответы
-//         </ButtonBase>      
-//       </ButtonGroup>
-//     </Grid>
-//   </>
-//   )
-// }
-
-// export default QuestionAnswer;

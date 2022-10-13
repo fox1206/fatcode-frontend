@@ -1,11 +1,8 @@
 import React from "react";
 import BackgoundUser from "../../layout/ProfileBack/BackgoundUser";
 import ProfileTitle from "../../components/profile/ProfileTitle";
-import {Avatar, Container, Grid} from "@mui/material";
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import {Container, Grid} from "@mui/material";
 import QuestionAnswer from "../../components/profile/QuestionAnswer";
-import { Box } from "@mui/material";
 
 const Question = () => {
     return(
