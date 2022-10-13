@@ -3,7 +3,7 @@ import {Grid, Typography} from "@mui/material";
 
 const ProfileTitle = ({text}) => {
     return(
-        <Grid>
+        <Grid mb={2}>
             <Typography sx={{
                 fontSize: 36,
                 fontWeight: "bold"
