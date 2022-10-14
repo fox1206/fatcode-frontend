@@ -1,13 +1,26 @@
 import React from "react";
-import {Container, Grid, Typography} from "@mui/material";
+import {Container, Grid, ListItem, Typography} from "@mui/material";
 
-const UserInformation = ({user, ...props}) => {
+type Props = {
+    user: User[],
+    bcolor: any,
+    border: any,
+    width: any
+}
+
+interface User{
+    key: number,
+    text: string,
+    use: string
+}
+
+const UserInformation: React.FC<Props> = ({user, ...props}) => {
 
     return(
         <>
             {
                 user.map(item=>(
-                    <Grid>
+                    <ListItem key={item.key}>
                         <Grid>
                             <Typography mb={1} mt={1} sx={{
                                 fontSize: 22,
@@ -29,7 +42,7 @@ const UserInformation = ({user, ...props}) => {
                                 {item.use}
                             </Typography>
                         </Grid>
-                    </Grid>
+                    </ListItem>
                 ))
             }
         </>
