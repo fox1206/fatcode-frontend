@@ -7,6 +7,13 @@ import PetsDonats from "../../components/profile/PetsDonats";
 
 
 const Mydonats = () => {
+    const petList = [
+        {key: 1, img: "/assets/image/svg/Dog.svg", text: "fsd"},
+        {key: 2, img: "/assets/image/svg/Dog.svg", text: "das"},
+        {key: 3, img: "/assets/image/svg/Dog.svg", text: "fvcx"},
+        {key: 4, img: "/assets/image/svg/Dog.svg", text: "fvc242x"},
+        {key: 5, img: "/assets/image/svg/Dog.svg", text: "fvxcvgdrfs"},
+    ]
   return(
       <>
         <BackgoundUser>
@@ -55,7 +62,7 @@ const Mydonats = () => {
             }}>
                 Ваши маленькие чудеса
             </Typography>
-            <PetsDonats/>
+            <PetsDonats petsList={petList}/>
         </BackgoundUser>
       </>
   )
