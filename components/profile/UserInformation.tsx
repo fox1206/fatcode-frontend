@@ -20,7 +20,7 @@ const UserInformation: React.FC<Props> = ({user, ...props}) => {
         <>
             {
                 user.map(item=>(
-                    <ListItem key={item.key}>
+                    <Grid key={item.key}>
                         <Grid>
                             <Typography mb={1} mt={1} sx={{
                                 fontSize: 22,
@@ -42,7 +42,7 @@ const UserInformation: React.FC<Props> = ({user, ...props}) => {
                                 {item.use}
                             </Typography>
                         </Grid>
-                    </ListItem>
+                    </Grid>
                 ))
             }
         </>
