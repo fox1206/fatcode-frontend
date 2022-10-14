@@ -1,9 +1,12 @@
-import React, {ReactChildren, ReactNode} from "react";
+import React from "react";
 import {Container, Grid} from "@mui/material";
 import LeftMenu from "../profile/LeftMenu";
 
+type PropsChildren = {
+    children: React.ReactNode
+}
 
-const BackgoundUser = ({children}) => {
+const BackgoundUser = ({children}: PropsChildren) => {
     return(
             <Container fixed sx={{
                 background: "white",

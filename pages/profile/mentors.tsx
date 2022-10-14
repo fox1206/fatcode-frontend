@@ -1,12 +1,10 @@
-import React, {useState} from "react";
+import React, { useState} from "react";
 import BackgoundUser from "../../layout/ProfileBack/BackgoundUser";
 import ProfileTitle from "../../components/profile/ProfileTitle";
-import {Avatar, Button, Container, Grid, Typography} from "@mui/material";
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import MentorsListItem from "../../components/profile/mentors/MentorsListItem";
+import { Button, Grid, Typography} from "@mui/material";
 import MentorsList from "../../components/profile/mentors/mentorsList";
 import MentorCourse from "../../components/profile/mentors/MentorCourse";
+
 
 const mentor = [
     {key: 1, text:"Михаил"},
@@ -23,6 +21,7 @@ const list = [
     {key: 4, text:"HTML для чайников"},
 ]
 
+
 const Mentors = () => {
     const [countriesPerPage] = useState(5)
     const [currentPage, setCurrentPage] = useState(1)
@@ -33,7 +32,7 @@ const Mentors = () => {
     const currentPageList = mentor.slice(fistPage, lastPage)
 
     const next = () => setCurrentPage(prevState => prevState + 1)
-    const back = () => setCurrentPage(prevState => {
+    const back = () => setCurrentPage((prevState): any =>  {
         if(prevState>currentPage){
             return prevState - 1
         }else{
