@@ -12,7 +12,7 @@ import Box from '@mui/material/Box';
 import PersonOutlineRoundedIcon from '@mui/icons-material/PersonOutlineRounded';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-
+import { LogotypeHeader } from '../../components/header/componentsHeader/LogotypeHeader';
 
 const NavBar: React.FC = ({children}) => {
 const [anchorEl, setAnchorEl] = useState(null);
@@ -46,9 +46,7 @@ const openMenu = Boolean(anchorEl);
               }}>
                 {/* логотип */}
                 <Box>
-                  <Typography>
-                    Fat( )Code
-                  </Typography>
+                  <LogotypeHeader />
                 </Box>  
 
                 {/* ссылки */}
