@@ -5,7 +5,7 @@ import TabsUnstyled from '@mui/base/TabsUnstyled';
 import TabsListUnstyled from '@mui/base/TabsListUnstyled';
 import TabPanelUnstyled from '@mui/base/TabPanelUnstyled';
 import TabUnstyled, { tabUnstyledClasses } from '@mui/base/TabUnstyled';
-import LinearWithValueLabel from './ProgressMyCoursesStart';
+import ProgressMyCoursesStart from './ProgressMyCoursesStart';
 
 const TabL = styled(TabUnstyled)`
   font-family: Verdana;
@@ -55,13 +55,14 @@ const TabPanel = styled(TabPanelUnstyled)(
   ({ theme }) => `
   width: 100%;
   font-family: Verdana;
-  padding: 20px 12px;
+  padding: 20px 0px;
   `,
 );
 
 const TabsList = styled(TabsListUnstyled)(
   ({ theme }) => `
   margin-top: 20px;
+  max-width: 500px;
   min-width: 300px;
   background-color: #69CB2D;
   border-radius: 40px;
@@ -74,7 +75,21 @@ const TabsList = styled(TabsListUnstyled)(
 );
 
 export default function StartCourses() {
+  const myCourse = [
+    {
+      id: 1,
+      chapter: 'Python',
+      thema: [{ name: 'Объектно-ориентированное программирование', percent: 45, }, { name: 'Строим графики с Matplotlib', percent: 85, }],
+    },
+    {
+      id: 2,
+      chapter: 'HTML/CSS',
+      thema: [{ name: 'Векторная графика', percent: 20, }, { name: 'Селекторы ', percent: 100, }],
+    },
+  ];
+
   return (
+
     <TabsUnstyled defaultValue={0}>
 
       <TabsList>
@@ -83,12 +98,13 @@ export default function StartCourses() {
       </TabsList>
 
       <TabPanel value={0}>
-        <LinearWithValueLabel />
+        <ProgressMyCoursesStart myCourse={myCourse} />
       </TabPanel>
 
       <TabPanel value={1}>
         Пройденные курсы (какой-то вывод)
       </TabPanel>
     </TabsUnstyled>
+
   );
 }
