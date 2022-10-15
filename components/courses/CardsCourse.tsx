@@ -36,7 +36,7 @@ const buttonsList = ["Frontend", "Backend", "Тестирование", "Киб�
 
 export default function CardsCourse() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1 }} m={3}>
     
       {/* вывод кнопочныx элементов */}
       <Box component='div' sx={{paddingY: 5}}>

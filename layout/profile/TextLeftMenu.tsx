@@ -1,12 +1,19 @@
 import React from "react";
 import {Grid, Typography} from "@mui/material";
-import {useRouter} from "next/router";
 import Link from "next/link";
 
+type LeftMenu = {
+    list: List[]
+}
+
+type List = {
+    key?: number,
+    text?: string,
+    href: string
+}
 
 //Навесить линки на переходы по страницам
-const TextLeftMenu = ({list}) => {
-    const router = useRouter()
+const TextLeftMenu: React.FC<LeftMenu> = ({list}) => {
     return (
         <>
             {

@@ -1,7 +1,15 @@
 import {ListItem, Typography} from "@mui/material";
 
+type PropsList = {
+    list: List[]
+}
 
-const MentorCourse = ({list}) => {
+type List = {
+    key: number,
+    text: string
+}
+
+const MentorCourse = ({list}: PropsList) => {
     return(
         <>
             <Typography sx={{
@@ -13,7 +21,7 @@ const MentorCourse = ({list}) => {
             </Typography>
             {
                 list.map(item=>(
-                   <ListItem >
+                   <ListItem key={item.key}>
                        <Typography sx={{
                            color: "#BBC0CB",
                            fontSize: 20,

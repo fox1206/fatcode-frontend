@@ -4,8 +4,18 @@ import MentorsListItem from "./MentorsListItem";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import React from "react";
 
+type PropsList = {
+    currentPageList: CurrentPageList[],
+    next: any,
+    back: any
+}
+type CurrentPageList = {
+    key: number,
+    text: string
+}
 
-const MentorsList = ({currentPageList, next, back}) => {
+const MentorsList: React.FC<PropsList> = ({currentPageList,
+                                              next, back}) => {
     return(
         <>
             <Container sx={{
