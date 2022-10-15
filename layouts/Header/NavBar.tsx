@@ -38,7 +38,7 @@ const NavBar: React.FC = ({ children }) => {
       <Container maxWidth="xl" sx={{
         color: '#1C1D1E', marginBottom: 1
       }}>
-        <Box elevation={0}
+        <Box
           sx={{
             backgroundColor: '#E5E5E5'
           }}>
@@ -103,8 +103,7 @@ const NavBar: React.FC = ({ children }) => {
                 >
                   <MoreVertIcon />
                   {/* выпадающие элементы при нажатии на ... */}
-                  <Menu
-                    id='menu'
+                  <Menu id='menu'
                     anchorEl={anchorEl}
                   // open={openMenu} 
                   // onClose={closeMenu}
