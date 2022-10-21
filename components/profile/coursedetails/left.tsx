@@ -1,47 +1,41 @@
-import React from 'react';
-import {Box, Typography} from "@mui/material";
+import React, {useState} from 'react';
+import {Box, Container, Typography} from "@mui/material";
+import CountEx from "../../courses/CountEx";
+import LeftInformation from "../../courses/LeftInformation";
+
+const info1 = [
+    {key: 1, text: " В курсе вы узнаете о мощных способах хранения и управления данными, а также о полезных\n" +
+            "                инструментах\n" +
+            "                для обработки данных, которые помогут вам самостоятельно проводить анализ"},
+]
+
+const info2 = [
+    {key: 1, text: "Python – это высокоуровневый язык программирования общего назначения, который становится\n" +
+            "                популярным\n" +
+            "                как при создании простых web-сайтов, так и при разработке сложных моделей машинного обучения.\n" +
+            "                Компании по всему миру используют Python для решения большого объема самых разноплановых проблем\n" +
+            "                и\n" +
+            "                задач. В нашем курсе \"Python для начинающих\" вы узнаете о мощных способах хранения и управления\n" +
+            "                данными, а также о полезных инструментах для обработки данных, которые помогут вам\n" +
+            "                самостоятельно\n" +
+            "                проводить анализ. Начните онлайн-курс по Python в DeepSkills прямо сейчас."}
+]
 
 export const Left = () => {
+    const [experiences, setExperiances] = useState([
+        {key: 1, count: 25, text: "монет"},
+        {key: 2, count: 11, text: "видео"},
+        {key: 3, count: 46, text: "упражнений"},
+        {key: 4, count: 4700, text: "опыта"},
+    ])
+
     return (
-        <Box sx={{mt: 5}}>
-            <Box component='div' sx={{width: 592, border: '1px solid #000000', borderRadius: 40}}>
-                <Typography
-                     sx={{width: 230, borderRadius: '40px', bgcolor: '#1C1D1E', color: '#FFFFFF', textAlign: 'center'}}>
-                    Для чего?
-                </Typography>
-                В курсе вы узнаете о мощных способах хранения и управления данными, а также о полезных
-                инструментах
-                для обработки данных, которые помогут вам самостоятельно проводить анализ.
+        <Container>
+            <LeftInformation title={"Для чего?"} info={info1}/>
+            <Box mt={5} mb={10}>
+                <CountEx exp={experiences}/>
             </Box>
-            <Box sx={{display: 'flex', mt: 5}}>
-                <Box component='div' sx={{mr: '20px', width: 133, height: 133, bgcolor: '#69CB2D', textAlign: 'center'}}>
-                    25 монет
-                </Box>
-                <Box component='div' sx={{mr: '20px', width: 133, height: 133, bgcolor: '#69CB2D', textAlign: 'center'}}>
-                    11 видно
-                </Box>
-                <Box component='div' sx={{mr: '20px', width: 133, height: 133, bgcolor: '#69CB2D', textAlign: 'center'}}>
-                    46 упражнений
-                </Box>
-                <Box component='div' sx={{width: 133, height: 133, bgcolor: '#69CB2D', textAlign: 'center'}}>
-                    4700 опыта
-                </Box>
-            </Box>
-            <Box component='div' sx={{mt: 5, width: 592, border: '1px solid #000000', borderRadius: 40}}>
-                <Typography
-                    sx={{width: 230, borderRadius: '40px', bgcolor: '#1C1D1E', color: '#FFFFFF', textAlign: 'center'}}>
-                    Описание курса
-                </Typography>
-                Python – это высокоуровневый язык программирования общего назначения, который становится
-                популярным
-                как при создании простых web-сайтов, так и при разработке сложных моделей машинного обучения.
-                Компании по всему миру используют Python для решения большого объема самых разноплановых проблем
-                и
-                задач. В нашем курсе "Python для начинающих" вы узнаете о мощных способах хранения и управления
-                данными, а также о полезных инструментах для обработки данных, которые помогут вам
-                самостоятельно
-                проводить анализ. Начните онлайн-курс по Python в DeepSkills прямо сейчас.
-            </Box>
-        </Box>
+            <LeftInformation title={"Описание курса"} info={info2}/>
+        </Container>
     );
 };

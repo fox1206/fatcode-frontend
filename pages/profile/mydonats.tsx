@@ -1,5 +1,5 @@
 import ProfileTitle from "../../components/profile/profile[id]/ProfileTitle";
-import BackgoundUser from "../../layout/ProfileBack/BackgoundUser";
+import BackgoundUser from "../../layouts/ProfileBack/BackgoundUser";
 import {Button, Typography} from "@mui/material";
 import Image from "next/image";
 import Grid from "@mui/material/Grid";

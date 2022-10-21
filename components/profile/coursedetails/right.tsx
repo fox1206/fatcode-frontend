@@ -1,20 +1,48 @@
 import React from 'react';
-import {Accordion, AccordionDetails, AccordionSummary, Box, Button, Link, Typography} from "@mui/material";
+import {Accordion, AccordionDetails, AccordionSummary, Box, Button, Container, Link, Typography} from "@mui/material";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import {left, right} from "@popperjs/core";
 
 export const Right = () => {
     return (
-        <Box sx={{width: '1088px'}}>
-            <Link sx={{bgcolor: '#69CB2D', borderRadius: '40px', p: '10px', textDecoration: 'none', cursor: 'pointer'}}>
-                Начать обучение
-            </Link>
+        <Container fixed
+                   sx={{
+                       background: "white",
+                       borderBottomLeftRadius: 20,
+                       borderBottomRightRadius: 20,
+                       color: '#1C1D1E',
+                       paddingBottom: 10,
+                       marginBottom: 10
+                   }}>
+            <Box
+                sx={{
+                    // position: 'absolute',
+                    mt: 2,
+                    float: right
+                }}>
+                <Button
+                    sx={{
+                        // position: 'relative',
+                        // right: -700,
+                        // top: 0,
+                        bgcolor: '#69CB2D',
+                        borderRadius: '40px',
+                        p: '10px',
+                        textDecoration: 'none',
+                        cursor: 'pointer',
+                        color: 'white',
+                    }}>
+                    Начать обучение
+                </Button>
+            </Box>
             <Typography
                 sx={{
                     mt: '20px',
+                    pt: 4,
                     fontFamily: 'Montserrat',
                     fontStyle: 'normal',
-                    fontWeight: 800,
-                    fontSize: '38px',
+                    fontWeight: 'bold',
+                    fontSize: 38,
                     textAlign: 'left',
                     color: '#000000',
                 }}>
@@ -26,8 +54,8 @@ export const Right = () => {
                     mb: '15px',
                     fontFamily: 'Verdana',
                     fontStyle: 'normal',
-                    fontWeight: 400,
-                    fontSize: '20px',
+                    fontWeight: 'normal',
+                    fontSize: 20,
                     textAlign: 'left',
                     color: '#000000',
                 }}>
@@ -36,7 +64,13 @@ export const Right = () => {
                 с помощью скрипта. Создайте свои первые переменные и познакомьтесь с основными типами данных
                 Python.
             </Typography>
-            <Accordion sx={{border: '1px solid #1C1D1E', borderRadius: '40px'}}>
+            <Accordion sx={{
+                border: '1px solid #1C1D1E',
+                borderRadius: '40px',
+                mb: '60px',
+                width: 335,
+                "&:hover": {border: '1px solid #69CB2D'}
+            }}>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon/>}
                     aria-controls="panel1a-content"
@@ -50,6 +84,7 @@ export const Right = () => {
                             fontSize: '20px',
                             color: '#1C1D1E',
                             textAlign: 'center',
+                            "&:hover": {color: '#69CB2D'}
                         }}>
                         Содержание раздела
                     </Typography>
@@ -59,8 +94,8 @@ export const Right = () => {
                         sx={{
                             fontFamily: 'Verdana',
                             fontStyle: 'normal',
-                            fontWeight: 700,
-                            fontSize: '20px',
+                            fontWeight: 'bold',
+                            fontSize: 20,
                             color: '#1C1D1E',
                             textAlign: 'left',
                         }}>
@@ -101,19 +136,57 @@ export const Right = () => {
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-            <Typography>
+            <Typography
+                sx={{
+                    mt: '20px',
+                    fontFamily: 'Montserrat',
+                    fontStyle: 'normal',
+                    fontWeight: 'bold',
+                    fontSize: 38,
+                    textAlign: 'left',
+                    color: '#000000',
+                }}>
                 2. Списки Python
-                Изучите хранение, доступ и управление данными в списках. Сделайте первый шаг к эффективной
-                работе с
+            </Typography>
+            <Typography
+                sx={{
+                    mt: '20px',
+                    mb: '15px',
+                    fontFamily: 'Verdana',
+                    fontStyle: 'normal',
+                    fontWeight: 'normal',
+                    fontSize: 20,
+                    textAlign: 'left',
+                    color: '#000000',
+                }}
+            >
+                Изучите хранение, доступ и управление данными в списках. Сделайте первый шаг к эффективной работе с
                 большими объемами данных.
             </Typography>
-            <Accordion>
+            <Accordion sx={{
+                border: '1px solid #1C1D1E',
+                borderRadius: '40px',
+                mb: '60px',
+                width: 335,
+                "&:hover": {border: '1px solid #69CB2D'}
+            }}>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon/>}
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                 >
-                    <Typography>Содержание раздела</Typography>
+                    <Typography
+                        sx={{
+                            fontFamily: 'Verdana',
+                            fontStyle: 'normal',
+                            fontWeight: 'bold',
+                            fontSize: 20,
+                            color: '#1C1D1E',
+                            textAlign: 'center',
+                            "&:hover": {color: '#69CB2D'}
+                        }}>
+                        Содержание раздела
+                    </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
@@ -126,20 +199,56 @@ export const Right = () => {
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-            <Typography>
+            <Typography
+                sx={{
+                    mt: '20px',
+                    fontFamily: 'Montserrat',
+                    fontStyle: 'normal',
+                    fontWeight: 'bold',
+                    fontSize: 38,
+                    textAlign: 'left',
+                    color: '#000000',
+                }}>
                 3. Функции и пакеты
-                Вы узнаете, как применять функции, методы и пакеты для эффективного использования кода,
-                написанного
-                лучшими разработчиками Python. Цель – сократить объем кода, необходимый для решения сложных
-                задач!
             </Typography>
-            <Accordion>
+            <Typography
+                sx={{
+                    mt: '20px',
+                    mb: '15px',
+                    fontFamily: 'Verdana',
+                    fontStyle: 'normal',
+                    fontWeight: 'normal',
+                    fontSize: 20,
+                    textAlign: 'left',
+                    color: '#000000',
+                }}>
+                Вы узнаете, как применять функции, методы и пакеты для эффективного использования кода, написанного
+                лучшими разработчиками Python. Цель – сократить объем кода, необходимый для решения сложных задач!
+            </Typography>
+            <Accordion sx={{
+                border: '1px solid #1C1D1E',
+                borderRadius: '40px',
+                mb: '60px',
+                width: 335,
+                "&:hover": {border: '1px solid #69CB2D'}
+            }}>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon/>}
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                 >
-                    <Typography>Содержание раздела</Typography>
+                    <Typography
+                        sx={{
+                            fontFamily: 'Verdana',
+                            fontStyle: 'normal',
+                            fontWeight: 'bold',
+                            fontSize: 20,
+                            color: '#1C1D1E',
+                            textAlign: 'center',
+                            "&:hover": {color: '#69CB2D'}
+                        }}>
+                        Содержание раздела
+                    </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
@@ -152,19 +261,58 @@ export const Right = () => {
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-            <Typography>
+            <Typography
+                sx={{
+                    mt: '20px',
+                    fontFamily: 'Montserrat',
+                    fontStyle: 'normal',
+                    fontWeight: 'bold',
+                    fontSize: 38,
+                    textAlign: 'left',
+                    color: '#000000',
+                }}>
                 4. NumPy
+            </Typography>
+            <Typography
+                sx={{
+                    mt: '20px',
+                    mb: '15px',
+                    fontFamily: 'Verdana',
+                    fontStyle: 'normal',
+                    fontWeight: 'normal',
+                    fontSize: 20,
+                    textAlign: 'left',
+                    color: '#000000',
+                }}>
                 NumPy – это базовый пакет Python для высокопроизводительных научных вычислений и анализа данных.
                 Вы
                 научитесь работать с мощными инструментами массива NumPy и приступите к анализу данных.
             </Typography>
-            <Accordion>
+            <Accordion sx={{
+                border: '1px solid #1C1D1E',
+                borderRadius: '40px',
+                mb: '60px',
+                width: 335,
+                "&:hover": {border: '1px solid #69CB2D'}
+            }}>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon/>}
                     aria-controls="panel1a-content"
                     id="panel1a-header"
+                    sx={{"&:hover": {fill: '#69CB2D'}}}
                 >
-                    <Typography>Содержание раздела</Typography>
+                    <Typography
+                        sx={{
+                            fontFamily: 'Verdana',
+                            fontStyle: 'normal',
+                            fontWeight: 'bold',
+                            fontSize: 20,
+                            color: '#1C1D1E',
+                            textAlign: 'center',
+                            "&:hover": {color: '#69CB2D'}
+                        }}>
+                        Содержание раздела
+                    </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
@@ -177,7 +325,9 @@ export const Right = () => {
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-        </Box>
+            <Box>
+            </Box>
+        </Container>
     )
         ;
 };

@@ -1,6 +1,6 @@
 import React from "react";
 import {Avatar, Grid, Typography} from "@mui/material";
-import BackgoundUser from "../../layout/ProfileBack/BackgoundUser";
+import BackgoundUser from "../../layouts/ProfileBack/BackgoundUser";
 import UserInformation from "../../components/profile/profile[id]/UserInformation";
 import Pencil from "../../components/profile/profile[id]/Pencil";
 import UserAvatar from "../../components/profile/profile[id]/UserAvatar";

@@ -1,5 +1,5 @@
 import React, { useState} from "react";
-import BackgoundUser from "../../layout/ProfileBack/BackgoundUser";
+import BackgoundUser from "../../layouts/ProfileBack/BackgoundUser";
 import ProfileTitle from "../../components/profile/profile[id]/ProfileTitle";
 import { Button, Grid, Typography} from "@mui/material";
 import MentorsList from "../../components/profile/mentors/mentorsList";
