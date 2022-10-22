@@ -1,7 +1,5 @@
 import React from 'react';
-//import Photo from './../../../public/coursedetails/Group404.jpg'
 import {Avatar, Box, Button, Container, Typography} from "@mui/material";
-import Image from "next/image";
 import Grid from "@mui/material/Grid";
 
 export const Center = () => {
