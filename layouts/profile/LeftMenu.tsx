@@ -64,6 +64,7 @@ const LeftMenu = () => {
                     borderBottomRightRadius: 20,
                     paddingTop: 5,
                     paddingBottom: 2,
+                    boxShadow: '2px 4px 10px 0px rgba(0, 0, 0, 0.5)',
                 }}>
                     <TextLeftMenu list={list}/>
                 </Box>
