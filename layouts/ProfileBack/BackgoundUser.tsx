@@ -9,6 +9,8 @@ type PropsChildren = {
 const BackgoundUser = ({children}: PropsChildren) => {
     return(
             <Container fixed sx={{
+                mt: 5,
+                paddingTop: 3,
                 background: "white",
                 borderBottomLeftRadius: 20,
                 borderBottomRightRadius: 20,
