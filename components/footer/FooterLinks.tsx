@@ -39,8 +39,9 @@ const FooterLinks = ({footerText}) => {
                                         </Box>
               </Grid> :
               <Grid>
-                {el.href.map((e, i) => (<Typography key={i} 
+                {el.href.map((e, i) => (<Typography><Typography key={i} 
                                           sx={{
+                                            display: 'inline',
                                             fontSize: 14, 
                                             fontWeight: 400, 
                                             lineHeight: 2,
@@ -48,7 +49,7 @@ const FooterLinks = ({footerText}) => {
                                             position: 'relative',
                                             "&:before": {
                                               content: '""',
-                                              width: '50%',
+                                              width: '100%',
                                               height: '2px',
                                               position: 'absolute',
                                               backgroundColor: '#69CB2D',
@@ -56,6 +57,7 @@ const FooterLinks = ({footerText}) => {
                                               bottom: '-2px',
                                               transform: 'scaleX(0)',
                                               transition: 'transform .5s',
+                                              transformOrigin: 'left',
                                             },
                                             "&:hover:before": {
                                               transform: 'scaleX(1)',
@@ -64,7 +66,7 @@ const FooterLinks = ({footerText}) => {
                                             },
                                           }}>
                                             {e.title}
-                                        </Typography>))}</Grid>}    
+                                        </Typography></Typography>))}</Grid>}    
         </Grid>
       ))}
     </Grid>      
