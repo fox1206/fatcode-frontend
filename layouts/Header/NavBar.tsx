@@ -14,6 +14,8 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { LogotypeHeader } from '../../components/header/componentsHeader/LogotypeHeader';
 import MobiileNavBar from './MobileNavBar';
+import {useRouter} from "next/router";
+import Link from "next/link";
 
 
 const NavBar: React.FC = ({ children }) => {
@@ -82,14 +84,18 @@ const NavBar: React.FC = ({ children }) => {
                 <IconButton>
                   <PersonOutlineRoundedIcon sx={{ color: '#69CB2D' }} />
                 </IconButton>
-                <Button variant='text' disableElevation
+                <Button
+                    variant='text'
+                    disableElevation
                   sx={{
                     textTransform: 'capitalize',
                     // fontWeight: 500,
-                    // fontSize: 20, 
+                    // fontSize: 20,
                     color: '#1C1D1E',
                   }}>
-                  Войти
+                  <Link href={'autorization'}>
+                    Войти
+                  </Link>
                 </Button>
 
                 {/* кнопка ... */}
