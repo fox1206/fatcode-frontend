@@ -35,13 +35,11 @@ const NavBar: React.FC = ({ children }) => {
 
   return (
     <>
-      <Container maxWidth="xl" sx={{
-        color: '#1C1D1E', marginBottom: 1
-      }}>
         <Box
           sx={{
             backgroundColor: '#E5E5E5'
           }}>
+          <AppBar elevation={5} sx={{backgroundColor: '#E5E5E5'}}> 
           <Toolbar>
             <Box component='div'
               sx={{
@@ -69,7 +67,7 @@ const NavBar: React.FC = ({ children }) => {
                 <InputBase placeholder='искать тут'
                   endAdornment={
                     <InputAdornment position='end'>
-                      <SearchIcon />
+                      <SearchIcon sx={{cursor: 'pointer'}}/>
                     </InputAdornment>
                   }
                   sx={{
@@ -117,8 +115,8 @@ const NavBar: React.FC = ({ children }) => {
               </Box>
             </Box>
           </Toolbar>
+          </AppBar>   
         </Box>
-      </Container>
       {children}
     </>
   );
