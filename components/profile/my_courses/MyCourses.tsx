@@ -21,7 +21,6 @@ const TabL = styled(TabUnstyled)`
   border-bottom-left-radius: 40px;
   display: flex;
   justify-content: center;
-
   &.${tabUnstyledClasses.selected} {
     background-color: #FFFFFF;
     border: 3px solid #69CB2D;
@@ -43,7 +42,6 @@ const TabR = styled(TabUnstyled)`
   border-bottom-right-radius: 40px;
   display: flex;
   justify-content: center;
-
   &.${tabUnstyledClasses.selected} {
     background-color: #FFFFFF;
     border: 3px solid #69CB2D;
@@ -52,7 +50,7 @@ const TabR = styled(TabUnstyled)`
 `;
 
 const TabPanel = styled(TabPanelUnstyled)(
-  ({ theme }) => `
+    ({ theme }) => `
   width: 100%;
   font-family: Verdana;
   padding: 20px 0px;
@@ -60,7 +58,7 @@ const TabPanel = styled(TabPanelUnstyled)(
 );
 
 const TabsList = styled(TabsListUnstyled)(
-  ({ theme }) => `
+    ({ theme }) => `
   margin-top: 20px;
   max-width: 500px;
   min-width: 300px;
@@ -75,36 +73,36 @@ const TabsList = styled(TabsListUnstyled)(
 );
 
 export default function StartCourses() {
-  const myCourse = [
-    {
-      id: 1,
-      chapter: 'Python',
-      thema: [{ name: 'Объектно-ориентированное программирование', percent: 45, }, { name: 'Строим графики с Matplotlib', percent: 85, }],
-    },
-    {
-      id: 2,
-      chapter: 'HTML/CSS',
-      thema: [{ name: 'Векторная графика', percent: 20, }, { name: 'Селекторы ', percent: 100, }],
-    },
-  ];
+    const myCourse = [
+        {
+            id: 1,
+            chapter: 'Python',
+            thema: [{ name: 'Объектно-ориентированное программирование', percent: 45, }, { name: 'Строим графики с Matplotlib', percent: 85, }],
+        },
+        {
+            id: 2,
+            chapter: 'HTML/CSS',
+            thema: [{ name: 'Векторная графика', percent: 20, }, { name: 'Селекторы ', percent: 100, }],
+        },
+    ];
 
-  return (
+    return (
 
-    <TabsUnstyled defaultValue={0}>
+        <TabsUnstyled defaultValue={0}>
 
-      <TabsList>
-        <TabL>Начатые курсы</TabL>
-        <TabR>Пройденные курсы</TabR>
-      </TabsList>
+            <TabsList>
+                <TabL>Начатые курсы</TabL>
+                <TabR>Пройденные курсы</TabR>
+            </TabsList>
 
-      <TabPanel value={0}>
-        <ProgressMyCoursesStart myCourse={myCourse} />
-      </TabPanel>
+            <TabPanel value={0}>
+                <ProgressMyCoursesStart myCourse={myCourse} />
+            </TabPanel>
 
-      <TabPanel value={1}>
-        Пройденные курсы (какой-то вывод)
-      </TabPanel>
-    </TabsUnstyled>
+            <TabPanel value={1}>
+                Пройденные курсы (какой-то вывод)
+            </TabPanel>
+        </TabsUnstyled>
 
-  );
+    );
 }
