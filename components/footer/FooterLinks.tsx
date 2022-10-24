@@ -45,6 +45,23 @@ const FooterLinks = ({footerText}) => {
                                             fontWeight: 400, 
                                             lineHeight: 2,
                                             cursor: 'pointer',
+                                            position: 'relative',
+                                            "&:before": {
+                                              content: '""',
+                                              width: '50%',
+                                              height: '2px',
+                                              position: 'absolute',
+                                              backgroundColor: '#69CB2D',
+                                              left: 0,
+                                              bottom: '-2px',
+                                              transform: 'scaleX(0)',
+                                              transition: 'transform .5s',
+                                            },
+                                            "&:hover:before": {
+                                              transform: 'scaleX(1)',
+                                              transition: 'transform .5s',
+                                              transformOrigin: 'left',
+                                            },
                                           }}>
                                             {e.title}
                                         </Typography>))}</Grid>}    
