@@ -7,7 +7,7 @@ import { Box } from "@mui/material";
 const MainLayout: React.FC<Child> = ({children})=>{
   return (
       <>
-        <Box mt={5}>
+        <Box maxWidth="xl" pb={10} sx={{margin: '0 auto'}}>
           <CardsCourse />
         </Box>
       </>

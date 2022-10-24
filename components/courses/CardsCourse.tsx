@@ -38,7 +38,7 @@ const buttonsList = ["Frontend", "Backend", "Тестирование", "Киб�
 export default function CardsCourse() {
   const router = useRouter()
   return (
-    <Box sx={{ flexGrow: 1 }} m={3}>
+    <Box sx={{ flexGrow: 1 }} m={3} mt={5}>
     
       {/* вывод кнопочныx элементов */}
       <Box component='div' sx={{paddingY: 5}}>
