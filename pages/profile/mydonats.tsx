@@ -8,11 +8,11 @@ import PetsDonats from "../../components/profile/mydonats/PetsDonats";
 
 const Mydonats = () => {
     const petList = [
-        {key: 1, img: "/assets/image/svg/Dog.svg", text: "fsd"},
-        {key: 2, img: "/assets/image/svg/Dog.svg", text: "das"},
-        {key: 3, img: "/assets/image/svg/Dog.svg", text: "fvcx"},
-        {key: 4, img: "/assets/image/svg/Dog.svg", text: "fvc242x"},
-        {key: 5, img: "/assets/image/svg/Dog.svg", text: "fvxcvgdrfs"},
+        {key: 1, img: "/assets/image/svg/Dog.svg", text: "31 марта 2021 г переведено 1000р в “Центр помощи среднеазиатским овчаркам “Алабай 911””"},
+        {key: 2, img: "/assets/image/svg/Dog.svg", text: "Lorem Ipsum часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной для текстов"},
+        {key: 3, img: "/assets/image/svg/Dog.svg", text: "31 марта 2021 г переведено 1000р в “Центр помощи среднеазиатским овчаркам “Алабай 911””"},
+        {key: 4, img: "/assets/image/svg/Dog.svg", text: "31 марта 2021 г переведено 1000р в “Центр помощи среднеазиатским овчаркам “Алабай 911””"},
+        {key: 5, img: "/assets/image/svg/Dog.svg", text: "31 марта 2021 г переведено 1000р в “Центр помощи среднеазиатским овчаркам “Алабай 911””"},
     ]
   return(
       <>
@@ -36,7 +36,8 @@ const Mydonats = () => {
                 "&: hover":{
                     color: "white",
                     background: "#69CB2D",
-                    border: "1px solid #69CB2D"
+                    border: "1px solid #69CB2D",
+                    transition: '.5s'
                 }}}>
                 Нашей команде
             </Button>
@@ -52,7 +53,8 @@ const Mydonats = () => {
                 "&: hover":{
                     color: "white",
                     background: "#69CB2D",
-                    border: "1px solid #69CB2D"
+                    border: "1px solid #69CB2D",
+                    transition: '.5s'
                 }}}>
                 Животным
             </Button>
