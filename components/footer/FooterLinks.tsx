@@ -13,7 +13,7 @@ const FooterLinks = ({footerText}) => {
   return (
     <Grid container gap={2}>
       {footerText.map((el, i)=>(
-        <Grid xs={12} sm={4} md={3.5} key={el.id}>
+        <Grid xs={12} sm={5.6} md={3.5} key={el.id}>
           <Typography pb={2} sx={{fontSize: 18, fontWeight: 700}}>{el.text}</Typography>
 
           {el.text === 'Контакты' ? 

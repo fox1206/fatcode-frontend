@@ -49,7 +49,7 @@ const Footer = () => {
       </Grid>
 
       {/* вывод ссылок */}
-      <Grid item xs={12} sm={6} md={8}>
+      <Grid item xs={12} sm={12} md={8}>
         <FooterLinks footerText={footerText}/>
       </Grid>
     </Grid>
